@@ -25,9 +25,6 @@ RUN apt-get install -y nodejs
 RUN npm install -g bower
 RUN npm install -g gulp
 
-
-RUN cd ~ && wget http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar
-
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 COPY shared /var/www/html/
